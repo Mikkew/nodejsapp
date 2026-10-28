@@ -19,6 +19,7 @@ job('Aplicacion Node.js Docker DSL') {
             registryCredentials('docker-hub')
             forcePull(false)
             createFingerprints(false)
+			forceTag(false)
             skipDecorate()
         }
     }
