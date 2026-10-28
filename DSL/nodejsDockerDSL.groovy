@@ -10,11 +10,11 @@ job('Aplicacion Node.js Docker DSL') {
         scm('H/7 * * * *')
     }
     wrappers {
-        nodejs('nodejs')
+        nodejs('nodejs-jenkins')
     }
     steps {
         dockerBuildAndPublish {
-            repositoryName('macloujulian/nodejsapp')
+            repositoryName('mikkew94/nodejsapp')
             tag('${GIT_REVISION,length=7}')
             registryCredentials('docker-hub')
             forcePull(false)
